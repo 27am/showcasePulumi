@@ -17,7 +17,7 @@ const publicReadBinding = new gcp.storage.BucketIAMMember("public-read", {
 const file = new gcp.storage.BucketObject("upload-file", {
     bucket: bucket.name,
     // replace this with the path to your source file
-    source: new pulumi.asset.FileAsset("./dog.jpg"),
+    source: new pulumi.asset.FileAsset("./do.jpg"),
 });
 
 // Export the DNS name of the bucket
