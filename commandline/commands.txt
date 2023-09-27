@@ -1,0 +1,7 @@
+# Replace $BUCKET_NAME with the name of the bucket e.g. export BUCKET_NAME=my-bucket-ohoh
+
+gcloud storage buckets create gs://$BUCKET_NAME/ --uniform-bucket-level-access --project=nivatest-1 --location=europe-west1
+
+gcloud storage cp sq.jpeg gs://$BUCKET_NAME
+
+gcloud storage buckets add-iam-policy-binding gs://$BUCKET_NAME/ --member=allUsers --role=roles/storage.objectViewer
